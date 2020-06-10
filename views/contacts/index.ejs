@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="contact-form">
+      <h2>설문 결과</h2>
+      <table border="1">
+        <thead>
+          <tr><th></th><th>호랑이</th><th>코끼리</th></tr>
+        </thead>
+        <tfoot>
+          <th>합</th>
+          <th> <%= survey[0]+survey[2] %></th>
+          <th> <%= survey[1]+survey[3] %></th>
+        </tfoot>
+        
+          <tbody>
+            <tr>
+              <td>남</td>
+              <td>
+                <%= survey[0] %>
+              </td>
+              <td>
+                <%= survey[1] %>
+              </td>
+            </tr>
+            <tr>
+              <td>여</td>
+              <td>
+                <%= survey[2] %>
+              </td>
+              <td>
+                <%= survey[3] %>
+              </td>
+            </tr>         
+          </tbody>
+       
+      </table>
+</div>
+</body>
+</html>

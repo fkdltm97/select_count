@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="contact contact-new">
+      <h2>설문조사</h2>
+      <form class="contact-form" action="/contacts" method="POST">
+        <div>
+          <label for="gender">성별</label>
+          <input type="radio"  name="gender" id="gender" value="남자">남자
+          <input type="radio"  name="gender" id="gender" value ="여자">여자
+        </div>
+        <div>
+          <label for="animal">동물</label>
+          <input type="radio"  name="animal" id="animal" value="호랑이">호랑이
+          <input type="radio"  name="animal" id="animal"value="코끼리">코끼리
+        </div>
+          <button type="submit">확인</button>
+
+        
+        </div>
+      </form>
+      
+    </div>
+
+  </body>
+</html>
