@@ -20,25 +20,48 @@
         
           <tbody>
             <tr>
-              <td>남</td>
-              <td>
+              <th>남</th>
+              <th>
                 <%= survey[0] %>
-              </td>
-              <td>
+              </th>
+              <th>
                 <%= survey[1] %>
-              </td>
+              </th>
             </tr>
             <tr>
-              <td>여</td>
-              <td>
+              <th>여</th>
+              <th>
                 <%= survey[2] %>
-              </td>
-              <td>
+              </th>
+              <th>
                 <%= survey[3] %>
-              </td>
+              </th>
             </tr>         
           </tbody>
        
+          <tr>
+            <th>통계</th>
+            <th>
+              <% if(survey[0] > survey[1]) { %>
+              <span>남자는 호랑이를 더 좋아합니다.</span>
+              <% } else if (survey[0] < survey[1]) { %>
+              <span>남자는 코끼리를 더 좋아합니다.</span>
+              <% } else { %>
+              <span>남자는 호랑이와 코끼리 둘다 좋아합니다.</span>
+              <% } %>
+            </th>
+            <br>
+            <th>
+              <% if(survey[2] > survey[3]) { %>
+              <span>여자는 호랑이를 더 좋아합니다.</span>
+              <% } else if(survey[2] < survey[3]){ %>
+              <span>여자는 코끼리를 더 좋아합니다.</span>
+              <% } else { %>
+              <span>여자는 호랑이와 코끼리 둘다 좋아합니다.</span>
+              <% } %>
+            </th>
+          </tr>
+
       </table>
 </div>
 </body>
