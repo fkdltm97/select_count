@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // DB schema
 const bitSchema = mongoose.Schema({
-  gender: { type: String },
-  animal: { type: String },
+  gender: { type: String,required : true },
+  animal: { type: String,required : true },
 },
   {
     collection: 'survey',  //몽구스 콜렉션 이름 지정
@@ -46,7 +46,8 @@ app.get('/contacts', async function (req, res) {
     await Contact.countDocuments({ gender: '여자' ,animal:'호랑이'}),
     await Contact.countDocuments({ gender: '여자' ,animal:'코끼리'}),
   ]
-  res.render('contacts/index',{survey:result})
+ 
+  res.render('contacts/index',{survey:result},)
   
 }),
   // Contacts - New
@@ -57,8 +58,17 @@ app.get('/contacts', async function (req, res) {
 // Contacts - create
 app.post('/contacts', function (req, res) {
   Contact.create(req.body, function (err, contact) {
-    if (err) return res.json(err);
-    res.redirect('/contacts');
+    // if (err) return res.json(err);
+    // if(req.body.gender !== null && req.body.animal !== null){
+
+    //   res.redirect('/contacts');
+    // }
+//   });
+// });
+if(err) {      
+  return res.redirect('/contacts/new');
+}
+res.redirect('/contacts');
   });
 });
 
