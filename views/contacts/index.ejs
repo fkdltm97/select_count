@@ -3,14 +3,33 @@
   <head>
     <%- include('../partials/head') %>
   </head>
+
+  <style> div { position:relative; }
+   #cm { position:absolute; }
+    .hc { width:200px; left:0; right:0; margin-left:auto; margin-right:auto; } /* 가로 중앙 정렬 */
+     .vc { height:40px; top: 0; bottom:0; margin-top:auto; margin-bottom:auto; } /* 세로 중앙 정렬 */
+      .tc {width:60%; height: 100px; margin:auto; text-align: center;}
+      </style>
+
+  
+
   <body>
     <%- include('../partials/nav') %>
 
-    <div class="contact-form">
-      <h2>설문 결과</h2>
-      <table border="1">
+    <div>
+      <h2 class="hc vc">설문 결과</h2><br>
+
+      <h2><%=survey.survey%></h2>
+
+      <table border="1" class="tc">
         <thead>
-          <tr><th></th><th>호랑이</th><th>코끼리</th></tr>
+          <tr>
+            <th>
+
+            </th>
+            <th>호랑이</th>
+            <th>코끼리</th>
+          </tr>
         </thead>
         <tfoot>
           <th>합</th>

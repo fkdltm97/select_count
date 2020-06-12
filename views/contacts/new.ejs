@@ -5,7 +5,7 @@
   </head>
   <body>
     <%- include('../partials/nav') %>
-
+    <hr>
     <div class="contact contact-new">
       <h2>설문조사</h2>
       <form class="contact-form" action="/contacts" method="POST">
@@ -18,8 +18,8 @@
           <label for="animal">동물</label>
           <input type="radio"  name="animal" id="animal" value="호랑이">호랑이
           <input type="radio"  name="animal" id="animal"value="코끼리">코끼리
-        </div>
-          <button type="submit">확인</button>
+          <div>
+          <button type="submit" class="btn btn-primary">확인</button>
 
         
         </div>

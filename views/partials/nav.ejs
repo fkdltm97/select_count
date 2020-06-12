@@ -1,7 +1,17 @@
 <nav>
-  <div>Contact Book</div>
-  <ul>
-    <li><a href="/contacts">결과</a></li>
-    <li><a href="/contacts/new">설문조사</a></li>
-  </ul>
+  <style> 
+  div { position:relative; }
+   #cm { position:absolute; }
+    .hc { width:200px; left:0; right:0; margin-left:auto; margin-right:auto; } /* 가로 중앙 정렬 */ 
+    .vc { height:40px; top: 0; bottom:0; margin-top:auto; margin-bottom:auto; } /* 세로 중앙 정렬 */
+     hr { border : 3px solid skyblue}
+     </style>
+
+  
+  <div class="hc"><h1>설문조사</h1></div>
+     <div class="hc"> 
+    <button class="hc"><a href="/contacts">결과</a></button><br>
+    <button class="hc"><a href="/contacts/new">조사하기</a></button>
+    </div>
+  <hr>
 </nav>

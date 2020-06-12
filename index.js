@@ -65,5 +65,5 @@ app.post('/contacts', function (req, res) {
 // Port setting
 var port = 3000;
 app.listen(port, function () {
-  console.log('server on! http://localhost:' + port);
+  console.log('server on! IP: +' + port);
 });
